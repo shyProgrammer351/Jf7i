@@ -1,0 +1,87 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!--		<s-c-r-i-p-t a-s-y-n-c s-r-c="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> --> <!--		<s-c-r-i-p-t type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script> -->		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script> 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/C/C0701.js"></script> 		<script type="text/javascript" src="https://shyprogrammer351.github.io/reading/functions.js"></script> 		<link rel="stylesheet" href="https://shyprogrammer351.github.io/reading/layout.css"> 	</head> 	<body onload='f2();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"></div> 			<div id = "navigationBox"></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>char, int, double 형 변수에 !, 15, 3.14의 값을 저장하고 포인터 변수에서 각 변수의 주소값을 
+저장하고 기본 자료형 변수와 포인터 변수로 주소값 및 저장값 출력하는 문제입니다 이를 해결하는 다음 프로그램을 해석하세요 </pre> 				<pre class='selectable'>변수명   var주소값    저장값
+---------------------------------------------
+var1     0018FF44     !
+var2     0018FF40     15
+var3     0018FF38     3.140000
+변수명   pnt주소값    var주소값    저장값
+---------------------------------------------
+pnt1     0018FF34     0018FF44     !
+pnt2     0018FF30     0018FF40     15
+pnt3     0018FF2C     0018FF38     3.140000
+입력1)
+</pre><br><pre class='selectable'>변수명   var주소값    저장값
+---------------------------------------------
+var1     0018FF44     !
+var2     0018FF40     15
+var3     0018FF38     3.140000
+변수명   pnt주소값    var주소값    저장값
+---------------------------------------------
+pnt1     0018FF34     0018FF44     !
+pnt2     0018FF30     0018FF40     15
+pnt3     0018FF2C     0018FF38     3.140000
+입력2)
+</pre><br><pre class='selectable'>변수명   var주소값    저장값
+---------------------------------------------
+var1     0018FF44     !
+var2     0018FF40     15
+var3     0018FF38     3.140000
+변수명   pnt주소값    var주소값    저장값
+---------------------------------------------
+pnt1     0018FF34     0018FF44     !
+pnt2     0018FF30     0018FF40     15
+pnt3     0018FF2C     0018FF38     3.140000
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;기본 자료형 변수의 선언 및 값 저장 <br>&nbsp; &nbsp;포인터 변수의 선언 및 값 저장 <br>&nbsp; &nbsp;기본 자료형 변수(var1, var2, var3)로 주소값 및 저장값 출력 <br>&nbsp; &nbsp;포인터 변수(pnt1, pnt2, pnt3)로 주소값 및 저장값 출력 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter07/Pointer.c</font> 
+</pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt; 
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 프로그램 시작 </b></font>
+</pre>
+<pre id="code1" class="unselectable codeClass">1	int main(void) 
+</pre><pre id="code0" class="unselectable codeClass">	{ 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 기본 자료형 변수의 선언 및 값 저장 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// var1의 주소가 0018FF44라고 가정</font> 
+</pre><pre id="code0" class="unselectable codeClass">		char   var1  = '!';	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// var2의 주소가 0018FF40라고 가정</font> 
+</pre><pre id="code0" class="unselectable codeClass">		int    var2  = 15;	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// var3의 주소가 0018FF38라고 가정</font> 
+</pre>
+<pre id="code2" class="unselectable codeClass">2		double var3  = 3.14;	 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 포인터 변수의 선언 및 값 저장 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// pnt1의 주소가 0018FF34라고 가정</font> 
+</pre><pre id="code0" class="unselectable codeClass">		<font color='red' title="문자형 포인터 변수 자료형">char *</font>pnt1 = <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>var1;				 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// pnt2의 주소가 0018FF30라고 가정</font>	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color='red' title="정수형 포인터 변수 자료형">int *</font>pnt2 = <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>var2;				 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// pnt3의 주소가 0018FF2C라고 가정</font>	 
+</pre>
+<pre id="code3" class="unselectable codeClass">3		<font color='red' title="실수형 포인터 변수 자료형">double *</font>pnt3 = <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>var3;				 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 기본 자료형 변수(var1, var2, var3)로 주소값 및 저장값 출력 </b></font>
+</pre>
+<pre id="code4" class="unselectable codeClass">4		printf("\n변수명   var주소값    저장값\n"); 
+</pre>
+<pre id="code5" class="unselectable codeClass">5		printf("---------------------------------------------"); 
+</pre>
+<pre id="code6" class="unselectable codeClass">6		printf("var1     <font color='red' title="주소값 형식으로 출력">%p</font>     %c\n", <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>var1, var1 );				 
+</pre>
+<pre id="code7" class="unselectable codeClass">7		printf("var2     <font color='red' title="주소값 형식으로 출력">%p</font>     %d\n", <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>var2, var2 );				 
+</pre>
+<pre id="code8" class="unselectable codeClass">8		printf("var3     <font color='red' title="주소값 형식으로 출력">%p</font>     %f\n", <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>var3, var3 );				 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 포인터 변수(pnt1, pnt2, pnt3)로 주소값 및 저장값 출력 </b></font>
+</pre>
+<pre id="code9" class="unselectable codeClass">9		printf("\n변수명   pnt주소값    var주소값    저장값\n"); 
+</pre>
+<pre id="code10" class="unselectable codeClass">10		printf("---------------------------------------------\n"); 
+</pre>
+<pre id="code11" class="unselectable codeClass">11		printf("pnt1     <font color='red' title="주소값 형식으로 출력">%p</font>     <font color='red' title="주소값 형식으로 출력">%p</font>     %c\n", <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>pnt1, pnt1, <font color='red' title="포인터 변수가 가리키는 주소에 저장된 값을 나타내는 기호">*</font>pnt1 );		 
+</pre>
+<pre id="code12" class="unselectable codeClass">12		printf("pnt2     <font color='red' title="주소값 형식으로 출력">%p</font>     <font color='red' title="주소값 형식으로 출력">%p</font>     %d\n", <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>pnt2, pnt2, <font color='red' title="포인터 변수가 가리키는 주소에 저장된 값을 나타내는 기호">*</font>pnt2 );		 
+</pre>
+<pre id="code13" class="unselectable codeClass">13		printf("pnt3     <font color='red' title="주소값 형식으로 출력">%p</font>     <font color='red' title="주소값 형식으로 출력">%p</font>     %f\n", <font color='red' title="변수의 메모리 공간 주소값을 나타내는 주소연산자">&</font>pnt3, pnt3, <font color='red' title="포인터 변수가 가리키는 주소에 저장된 값을 나타내는 기호">*</font>pnt3 );		 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 종료 </b></font>
+</pre>
+<pre id="code14" class="unselectable codeClass">14		return 0; 
+</pre><pre id="code0" class="unselectable codeClass">	} 
+</pre></div>	 	 				<br><h4>키워드 설명</h4> 				<pre id = "d3" style='white-space:normal;'></pre> 			 				<h4>실행 순서</h4> 				<pre id = "d4" style='white-space:normal; width:800px;'> </pre> 				<pre style='white-space:normal;'> 					※ 실행순서 및 메모리상태는 A키(이전)및 D키(다음)를 눌러도 확인할 수 있습니다  				</pre> 				<br><br> 			</div> 			<div id = "floatingBox"> 				<pre id = "outputBox" class ="outputBox"></pre>  				<div id = "intermediateResult"> 					<img id = "d7"> 					<table style = "border-spacing:0px;margin:0px;table-layout:auto;"> 						<tbody id = "d8"></tbody> 					</table> 				</div> 			</div> 		</div> 	</body> </html> 

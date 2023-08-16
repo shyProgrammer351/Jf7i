@@ -1,0 +1,37 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/C/C0702.js"></script> 		<script type="text/javascript" src="https://shyprogrammer351.github.io/reading/functions.js"></script> 		<link rel="stylesheet" href="https://shyprogrammer351.github.io/reading/layout.css"> 		<script> 			var d10 = "3 4 1 2 5 6"; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>국어 점수, 영어 점수, 수학 점수를 입력받아 평균을 계산하는 문제입니다 실행순서를 클릭하세요 </pre> 				<pre class='selectable'>0점 ~ 100점 사이의 국어 점수를 입력하세요: <b><font color='red'>90</font></b>
+0점 ~ 100점 사이의 영어 점수를 입력하세요: <b><font color='red'>89</font></b>
+0점 ~ 100점 사이의 수학 점수를 입력하세요: <b><font color='red'>86</font></b>
+국어 90점, 영어 89점, 수학 86점의 평균은 88.33점입니다.
+</pre><br>  	 				<h4>프로그램 코드</h4> 				<pre></pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt; 
+
+</pre><pre id="code1" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(1)">1	void getScores( int *korean, int *english, int *mathematics, double *average )		
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		printf( "0점 ~ 100점 사이의 국어 점수를 입력하세요: " );
+</pre><pre id="code0" class="unselectable codeClass">		scanf( "%d", korean );		
+
+</pre><pre id="code0" class="unselectable codeClass">		printf( "0점 ~ 100점 사이의 영어 점수를 입력하세요: " );
+</pre><pre id="code0" class="unselectable codeClass">		scanf( "%d", english );				
+
+</pre><pre id="code0" class="unselectable codeClass">		printf( "0점 ~ 100점 사이의 수학 점수를 입력하세요: " );
+</pre><pre id="code0" class="unselectable codeClass">		scanf( "%d", mathematics );			
+
+</pre><pre id="code0" class="unselectable codeClass">		*average = (double)( *korean + *english + *mathematics ) / 3;			
+
+</pre><pre id="code0" class="unselectable codeClass">		return;
+</pre><pre id="code2" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(2)">2	}
+
+</pre><pre id="code3" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(3)">3	int main()
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		int korean = 0;
+</pre><pre id="code0" class="unselectable codeClass">		int english = 0;
+</pre><pre id="code0" class="unselectable codeClass">		int mathematics = 0;
+</pre><pre id="code0" class="unselectable codeClass">		double average = 0.0;
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code4" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(4)">4		getScores( &korean, &english, &mathematics, &average );				
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code5" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(5)">5		printf( "국어 %d점, 영어 %d점, 수학 %d점의 평균은 %.2f점입니다.", korean, english, mathematics, average );
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code6" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7(6)">6		return 0;
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre>
+</pre> 			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   
