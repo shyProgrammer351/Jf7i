@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0708.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			var d10 = "11 13 1 2 12 14 3 4 15 5 6 16 18 17 16 19"; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>제네릭 메서드를 이용하여 가변 길이 배열을 정렬입니다 실행순서를 클릭하세요 </pre> 				<pre class='selectable'>(strList) carrot 
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0708.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			var d10 = "11 13 1 2 12 14 3 4 15 5 6 16 17 16 18"; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>제네릭 메서드를 이용하여 가변 길이 배열을 정렬하는 문제입니다 실행순서를 클릭하세요 </pre> 				<pre class='selectable'>(strList) carrot 
 (intList) 10 20
 </pre><br>  	 				<h4>프로그램 코드</h4> 				<pre></pre><pre id="code0" class="unselectable codeClass">	class MyList<T> {
 </pre><pre id="code0" class="unselectable codeClass">		private Object[] array;
@@ -32,13 +32,13 @@
 </pre><pre id="code0" class="unselectable codeClass">			return (T)array[--index]; 
 </pre><pre id="code6" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('6')">6		}
 </pre><pre id="code0" class="unselectable codeClass">		
-</pre><pre id="code7" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('7')">7		public T get( int index ) {
+</pre><pre id="code0" class="unselectable codeClass">		public T get( int index ) {
 </pre><pre id="code0" class="unselectable codeClass">			return (T)array[index];
-</pre><pre id="code8" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('8')">8		}
+</pre><pre id="code0" class="unselectable codeClass">		}
 </pre><pre id="code0" class="unselectable codeClass">		
-</pre><pre id="code9" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('9')">9		public int size() {
+</pre><pre id="code0" class="unselectable codeClass">		public int size() {
 </pre><pre id="code0" class="unselectable codeClass">			return index;
-</pre><pre id="code10" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('10')">10		}
+</pre><pre id="code0" class="unselectable codeClass">		}
 </pre><pre id="code0" class="unselectable codeClass">	}
 
 </pre><pre id="code0" class="unselectable codeClass">	public class GenericClassMain {
@@ -51,8 +51,7 @@
 </pre><pre id="code15" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('15')">15			strList.remove();
 </pre><pre id="code0" class="unselectable codeClass">			System.out.print( "(strList) " );
 </pre><pre id="code16" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('16')">16			for( int i=0; i < strList.size(); i++ )
-</pre><pre id="code17" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('17')">17				System.out.print( 
-</pre><pre id="code18" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('18')">18				                  strList.get(i) + " " );
+</pre><pre id="code17" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('17')">17				System.out.print( strList.get(i) + " " );
 
 </pre><pre id="code0" class="unselectable codeClass">			MyList&lt;Integer&gt; intList = new MyList&lt;Integer&gt;(2); 
 </pre><pre id="code0" class="unselectable codeClass">			intList.add( 10 );
@@ -62,7 +61,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			System.out.print( "\n(intList) " );
 </pre><pre id="code0" class="unselectable codeClass">			for( int i=0; i < intList.size(); i++ )
 </pre><pre id="code0" class="unselectable codeClass">				System.out.print( intList.get(i) + " " );
-</pre><pre id="code0" class="unselectable codeClass">		}
-</pre><pre id="code19" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('19')">19	}
+</pre><pre id="code18" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('18')">18		}
+</pre><pre id="code0" class="unselectable codeClass">	}
 </pre>
 </pre> 			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   

@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0708.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			const d10 = [ ["2"], ["(Object객체02)"], ["0"], ["2"], ["(MyList객체01)"], ["(String객체04)"], ["banana"], ["2"], ["(String객체04)"], ["(String객체04)"], ["1"], 							]; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>제네릭 메서드를 이용하여 가변 길이 배열을 정렬입니다 이를 해결하는 다음 프로그램의 실행상태를 확인하세요 </pre> 				<pre class='selectable'>(strList) carrot 
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0708.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			const d10 = [ ["2"], ["(Object객체02)"], ["0"], ["2"], ["(MyList객체01)"], ["(String객체04)"], ["banana"], ["2"], ["(String객체04)"], ["(String객체04)"], ["1"], 							]; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>제네릭 메서드를 이용하여 가변 길이 배열을 정렬하는 문제입니다 이를 해결하는 다음 프로그램의 실행상태를 확인하세요 </pre> 				<pre class='selectable'>(strList) carrot 
 (intList) 10 20
 </pre><br> 	   				<h4>프로그램 코드</h4> 				<pre>		class MyList<T> {
 		private Object[] array;
@@ -32,13 +32,13 @@
 			return (T)array[--index]; 
 6		}
 		
-7		public T get( int index ) {
+		public T get( int index ) {
 			return (T)array[index];
-8		}
+		}
 		
-9		public int size() {
+		public int size() {
 			return index;
-10		}
+		}
 	}
 	
 	public class GenericClassMain {
@@ -51,8 +51,7 @@
 15			strList.remove();
 			System.out.print( "(strList) " );
 16			for( int i=0; i < strList.size(); i++ )
-17				System.out.print( 
-18				                  strList.get(i) + " " );
+17				System.out.print( strList.get(i) + " " );
 	
 			MyList<Integer> intList = new MyList<Integer>(2); 
 			intList.add( 10 );
@@ -62,8 +61,8 @@
 			System.out.print( "\n(intList) " );
 			for( int i=0; i < intList.size(); i++ )
 				System.out.print( intList.get(i) + " " );
-		}
-19	}
+18		}
+	}
 	</pre> 				<br>
 <h4>11과 16 사이의 실행순서(10개) 및 실행상태</h4>
 <pre style='margin:0;padding:0;'>13			                         new MyList<String>(2);</pre> <table style="font-size:10pt; background:Silver; border:0px; border-spacing:0px; margin:0px;padding:0;"> <tbody id="value_table"> <tr></tr> <tr> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; ">main()</td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td></tr> <tr> <td style = "margin:0px;padding:0;text-align:right; border:5px solid SkyBlue; background:SkyBlue;">strList</td> <td style = "margin:0px;padding:0;text-align:center; border:5px solid SkyBlue; background:Silver;"></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:right; border:5px solid MediumSeaGreen; background:MediumSeaGreen;">(MyList객체01)</td> <td style = "margin:0px;padding:0;text-align:left; border:5px solid MediumSeaGreen; background:Silver;">add(),remove(),get()</td> <td style = "margin:0px;padding:0;text-align:left; border:5px solid MediumSeaGreen; background:MediumSeaGreen;">등 데이터와 메서드</td></tr> <tr> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:right; border:5px solid MediumSeaGreen; background:MediumSeaGreen;">array</td> <td style = "margin:0px;padding:0;text-align:center; border:5px solid MediumSeaGreen; background:Silver;"></td> <td style = "margin:0px;padding:0;text-align:left; border:5px solid MediumSeaGreen; background:MediumSeaGreen;"></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td></tr> <tr> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:right; border:5px solid MediumSeaGreen; background:MediumSeaGreen;">index</td> <td style = "margin:0px;padding:0;text-align:center; border:5px solid MediumSeaGreen; background:Silver;"></td> <td style = "margin:0px;padding:0;text-align:left; border:5px solid MediumSeaGreen; background:MediumSeaGreen;"></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td></tr> <tr> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td> <td style = "margin:0px;padding:0;text-align:right; border:5px solid MediumSeaGreen; background:MediumSeaGreen;">size</td> <td style = "margin:0px;padding:0;text-align:center; border:5px solid MediumSeaGreen; background:Silver;"></td> <td style = "margin:0px;padding:0;text-align:left; border:5px solid MediumSeaGreen; background:MediumSeaGreen;"></td> <td style = "margin:0px;padding:0;text-align:left; border:0px solid Silver; background:Silver; "></td></tr> </tbody> </table> <br>
