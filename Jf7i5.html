@@ -1,0 +1,60 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0705.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 	</head> 	<body onload='f2();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"></div> 			<div id = "navigationBox"></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>Integer 객체를 포함하는 가변 길이 배열 Vector를 생성하고 활용하는 문제입니다 이를 해결하는 다음 프로그램을 해석하세요 </pre> 				<pre class='selectable'>0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>90</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>89</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>86</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>-1</font></b>
+86 89 90
+</pre><br><pre class='selectable'>0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>90</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>89</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>86</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>83</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>80</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>200</font></b>
+80 83 86 89 90
+</pre><br><pre class='selectable'>0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>70</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>60</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>80</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>90</font></b>
+0점 ~ 100점 사이의 점수를 입력하세요: <b><font color='red'>-10</font></b>
+60 70 80 90
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;점수 입력 <br>&nbsp; &nbsp;점수 정렬 <br>&nbsp; &nbsp;점수 출력 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter07/ScoreVectorMain.java</font> 
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.Scanner; 
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.<font color='red' title="데이터를 쉽게 추가하거나 삭제할 수 있는 가변 길이 벡터">Vector</font>; 
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.<font color='red' title="삽입이나 삭제에 따라 개수의 크기가 자동 조절되는 객체들의 모음">Collections</font>; 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	public class ScoreVectorMain { 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 시작 	</b></font>
+</pre>
+<pre id="code1" class="unselectable codeClass">1		public static void main(String[] args) { 
+</pre><pre id="code0" class="unselectable codeClass">			Scanner scan = new Scanner( System.in ); 
+</pre>
+<pre id="code2" class="unselectable codeClass">2			<font color='red' title="데이터를 쉽게 추가하거나 삭제할 수 있는 가변 길이 벡터">Vector</font><<font color='red' title="정수형 클래스">Integer</font>> scores = new <font color='red' title="데이터를 쉽게 추가하거나 삭제할 수 있는 가변 길이 벡터">Vector</font><<font color='red' title="정수형 클래스">Integer</font>>();  
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 점수 입력   </b></font>
+</pre>
+<pre id="code3" class="unselectable codeClass">3			while( true ) { 
+</pre><pre id="code0" class="unselectable codeClass">				System.out.print( "0점 ~ 100점 사이의 점수를 입력하세요: " ); 
+</pre><pre id="code0" class="unselectable codeClass">				<font color="green">// 90, 89, 86, -1을 순서대로 입력한다고 가정</font> 
+</pre><pre id="code0" class="unselectable codeClass">				int score = scan.nextInt();  
+</pre>
+<pre id="code4" class="unselectable codeClass">4				if ( ( score < 0 ) || ( 100 < score ) ) 
+</pre>
+<pre id="code5" class="unselectable codeClass">5					break; 
+</pre>
+<pre id="code6" class="unselectable codeClass">6				scores.<font color='red' title="배열 요소를 추가하는 메서드">add</font>( score ); 
+</pre><pre id="code0" class="unselectable codeClass">			} 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 점수 정렬  </b></font>
+</pre>
+<pre id="code7" class="unselectable codeClass">7			<font color='red' title="삽입이나 삭제에 따라 개수의 크기가 자동 조절되는 객체들의 모음">Collections</font>.<font color='red' title="객체 요소들을 정렬">sort</font>( scores ); 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 점수 출력  </b></font>
+</pre>
+<pre id="code8" class="unselectable codeClass">8			for( <font color='red' title="정수형 클래스">Integer</font> score : scores ) 
+</pre>
+<pre id="code9" class="unselectable codeClass">9				System.out.print( score + " " ); 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 종료 	</b></font>
+</pre>
+<pre id="code10" class="unselectable codeClass">10		} 
+</pre><pre id="code0" class="unselectable codeClass">	} 
+</pre></div>	 	 				<br><h4>키워드 설명</h4> 				<pre id = "d3" style='white-space:normal;'></pre> 			 				<h4>실행 순서</h4> 				<pre id = "d4" style='white-space:normal; width:800px;'> </pre> 				<pre style='white-space:normal;'> 					※ 실행순서 및 메모리상태는 A키(이전)및 D키(다음)를 눌러도 확인할 수 있습니다  				</pre> 				<br><br> 			</div> 			<div id = "floatingBox"> 				<pre id = "outputBox" class ="outputBox"></pre>  				<div id = "intermediateResult"> 					<img id = "d7"> 					<table style = "border-spacing:0px;margin:0px;table-layout:auto;"> 						<tbody id = "d8"></tbody> 					</table> 				</div> 			</div> 		</div> 	</body> </html> 

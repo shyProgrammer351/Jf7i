@@ -1,0 +1,126 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0703.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			var d10 = "M1 M3 F1 F2 C1 C2 F3 M2 M4 M6 C3 C4 M5 M7 M9 E001 M8 M6 C3 C6 M5 M7 M9 E002 M8 M6 C3 C6 M5 M7 M9 E003 M8 M6 C3 C6 M5 M7 M9 E004 M8 M6 C3 C5 M5 M7 M11 C8 C9 M10 M12"; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>챗봇 문제입니다 실행순서를 클릭하세요 예를 들어, 사용자가 아래와 같은 문자열을 포함해서 입력하면, 프로그램은 대응되는 시스템 답변을 출력합니다. 
+이 때, 사용자가 '바이'를 입력하면 '그래 안녕! 담에 또 봐!'를 출력 후 대화를 종료하고, 적절한 답변을 못 찾으면 '뭐 딴거 재밌는거 없을까?'를 출력합니다.
+<pre>
+--------- 파일 dialogue.txt의 내용 --------- 
+이름이 뭐	난 재석이야. 국민MC 유재석과 이름이 같아. ㅎㅎㅎ 넌 몇 살이니?
+몇 살	난 20살이야. 남들이 다 부러워하는 나이지. 넌 어디 살아?
+어디 살	난 홍지동 살아. 북한산 아래 있어서 공기가 무지 맑아.ㅎㅎㅎ 취미가 뭐니?
+만나서 반가	나도 반가워 친하게 지내자
+</pre></pre> 				<pre class='selectable'>(시스템) 안녕? 넌 이름이 모야?
+ 사용자: <b><font color='red'>난 희철 넌 이름이 뭐야?</font></b>
+(시스템) 난 재석이야. 국민MC 유재석과 이름이 같아. ㅎㅎㅎ 넌 몇 살이니?
+ 사용자: <b><font color='red'>난 20살 넌 몇 살이야?</font></b>
+(시스템) 난 20살이야. 남들이 다 부러워하는 나이지. 넌 어디 살아?
+ 사용자: <b><font color='red'>종로 넌 어디 살아?</font></b>
+(시스템) 난 홍지동 살아. 북한산 아래 있어서 공기가 무지 맑아.ㅎㅎㅎ 취미가 뭐니?
+ 사용자: <b><font color='red'>앗! 미안 지금 갑자기 나가봐야 해 다음에 또 봐 바이</font></b>
+(시스템) 그래 안녕! 담에 또 봐!
+</pre><br>  	 				<h4>프로그램 코드</h4> 				<pre></pre><pre id="code0" class="unselectable codeClass">	import java.util.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.io.*;
+
+</pre><pre id="code0" class="unselectable codeClass">	class Chatbot							 
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		ArrayList<String[]> pairs = new ArrayList<String[]>();	
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="codeC1" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C1')">C1		public Chatbot() 
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			 String[][] dialogue = 	 
+</pre><pre id="code0" class="unselectable codeClass">					{ { "이름이 뭐", "난 재석이야. 국민MC 유재석과 이름이 같아. ㅎㅎㅎ 넌 몇 살이니?" },
+</pre><pre id="code0" class="unselectable codeClass">					  { "만나서 반가", "나도 반가워 친하게 지내자" } };
+</pre><pre id="code0" class="unselectable codeClass">				for( String[] pair : dialogue )
+</pre><pre id="code0" class="unselectable codeClass">					pairs.add( pair );																
+</pre><pre id="codeC2" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C2')">C2		}
+
+</pre><pre id="codeC3" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C3')">C3		public String getResponse( String userUtterance )  
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if ( userUtterance == null )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="codeC4" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C4')">C4				return "(시스템) 안녕? 넌 이름이 모야?";							 
+</pre><pre id="code0" class="unselectable codeClass">			}		
+</pre><pre id="code0" class="unselectable codeClass">			else if ( userUtterance.contains( "바이" ) == true )  
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="codeC5" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C5')">C5				return null;																 	 
+</pre><pre id="code0" class="unselectable codeClass">			}
+
+</pre><pre id="code0" class="unselectable codeClass">			for ( String[] pair : pairs )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				if ( userUtterance.contains( pair[0] ) == true )  
+</pre><pre id="code0" class="unselectable codeClass">				{
+</pre><pre id="codeC6" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C6')">C6					return "(시스템) " + pair[1]; 									 
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="code0" class="unselectable codeClass">			}
+
+</pre><pre id="codeC7" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C7')">C7			return userUtterance + "(시스템) 뭐 딴거 재밌는거 없을까?";		 
+</pre><pre id="code0" class="unselectable codeClass">		}
+
+</pre><pre id="codeC8" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C8')">C8		public String getFinalResponse()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			return "(시스템) 그래 안녕! 담에 또 봐!";										 
+</pre><pre id="codeC9" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('C9')">C9		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+
+</pre><pre id="code0" class="unselectable codeClass">	class ChatbotFromFile extends Chatbot
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="codeF1" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('F1')">F1		public ChatbotFromFile( String dialoguePairFilename  )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="codeF2" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('F2')">F2			super();
+</pre><pre id="code0" class="unselectable codeClass">			this.pairs.clear();	
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="code0" class="unselectable codeClass">			try
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				BufferedReader inFile = new BufferedReader( new FileReader( new File( dialoguePairFilename ) ) ); 
+
+</pre><pre id="code0" class="unselectable codeClass">				for( String line = ""; ( line = inFile.readLine() ) != null; ) 
+</pre><pre id="code0" class="unselectable codeClass">				{
+</pre><pre id="code0" class="unselectable codeClass">					StringTokenizer tokenizer = new StringTokenizer( line, "\t\n" ); 
+</pre><pre id="code0" class="unselectable codeClass">					String[] pair = new String[2];
+</pre><pre id="code0" class="unselectable codeClass">					pair[0] = tokenizer.nextToken();	
+</pre><pre id="code0" class="unselectable codeClass">					pair[1] = tokenizer.nextToken();	
+</pre><pre id="code0" class="unselectable codeClass">					pairs.add( pair );								
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="code0" class="unselectable codeClass">				
+</pre><pre id="code0" class="unselectable codeClass">				inFile.close();	
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			catch ( IOException e ) 				 
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				System.out.println( "[오류] 파일을 열 수 없습니다!" );
+</pre><pre id="code0" class="unselectable codeClass">				e.printStackTrace();
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="codeF3" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('F3')">F3		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass">
+
+</pre><pre id="codeE001" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('E001')">E001		<font color="green">//  사용자:가 '난 희철 넌 이름이 뭐야?'을 입력</font> 
+</pre><pre id="codeE002" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('E002')">E002		<font color="green">//  사용자:가 '난 20살 넌 몇 살이야?'을 입력</font> 
+</pre><pre id="codeE003" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('E003')">E003		<font color="green">//  사용자:가 '종로 넌 어디 살아?'을 입력</font> 
+</pre><pre id="codeE004" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('E004')">E004		<font color="green">//  사용자:가 '앗! 미안 지금 갑자기 나가봐야 해 다음에 또 봐 바이'을 입력</font> 
+
+</pre><pre id="code0" class="unselectable codeClass">	public class ChatbotFromFileMain							 
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="codeM1" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M1')">M1		public static void main(String[] args) 	 
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			Scanner scan = new Scanner( System.in );  
+</pre><pre id="code0" class="unselectable codeClass">			final String filename = "C:\\Users\\user\\Downloads\\dialogue.txt";
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="codeM2" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M2')">M2			ChatbotFromFile chatbot = 
+</pre><pre id="codeM3" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M3')">M3			                  new ChatbotFromFile( filename ); 
+
+</pre><pre id="codeM4" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M4')">M4			for ( String input = null, output = null;
+</pre><pre id="codeM5" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M5')">M5			                                          ( output = 
+</pre><pre id="codeM6" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M6')">M6			                                                     chatbot.getResponse( input ) ) 
+</pre><pre id="codeM7" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M7')">M7			                                                                                    != null; )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				System.out.print( output + "\n 사용자: " );
+</pre><pre id="codeM8" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M8')">M8				input = 
+</pre><pre id="codeM9" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M9')">M9				        scan.nextLine();
+</pre><pre id="code0" class="unselectable codeClass">			}
+
+</pre><pre id="codeM10" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M10')">M10			System.out.print( 
+</pre><pre id="codeM11" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M11')">M11			                  chatbot.getFinalResponse() + "\n" );
+</pre><pre id="code0" class="unselectable codeClass">			scan.close();
+</pre><pre id="codeM12" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('M12')">M12			return;	 
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre>
+</pre> 			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   

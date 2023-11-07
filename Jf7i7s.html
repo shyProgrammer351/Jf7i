@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0707.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			var d10 = "3 4 1 2 5 1 2 6"; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>제네릭 메서드를 이용하여 가변 길이 배열을 정렬입니다 실행순서를 클릭하세요 </pre> 				<pre class='selectable'>1) 86 2) 89 3) 90 
+1) apple 2) banana 3) carrot
+</pre><br>  	 				<h4>프로그램 코드</h4> 				<pre>
+</pre><pre id="code0" class="unselectable codeClass">	public class GenericMethodMain {
+</pre><pre id="code1" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('1')">1		public static <T extends Comparable<T>> void sort( T[] list ) {
+</pre><pre id="code0" class="unselectable codeClass">			for ( int max = list.length - 1; max >= 0; max-- )				
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				for ( int index = 0; index < max; index++ )				
+</pre><pre id="code0" class="unselectable codeClass">				{
+</pre><pre id="code0" class="unselectable codeClass">					if ( list[ index ].compareTo( list[ index + 1 ] ) > 0 )				
+</pre><pre id="code0" class="unselectable codeClass">					{
+</pre><pre id="code0" class="unselectable codeClass">						T temp = list[ index ];						
+</pre><pre id="code0" class="unselectable codeClass">						list[ index ] = list[ index + 1 ]; 
+</pre><pre id="code0" class="unselectable codeClass">						list[ index + 1 ] = temp; 
+</pre><pre id="code0" class="unselectable codeClass">					}
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="code2" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('2')">2			}
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code7" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('7')">7		public static <T> void print( T[] list ) 
+</pre><pre id="code0" class="unselectable codeClass">		{	
+</pre><pre id="code0" class="unselectable codeClass">			for ( int index = 0; index < list.length; index ++ )  					 
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				System.out.print( ( index + 1 ) + ") " + list[ index ] + " " );
+</pre><pre id="code0" class="unselectable codeClass">			} 
+</pre><pre id="code0" class="unselectable codeClass">			System.out.println();
+</pre><pre id="code8" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('8')">8		}		
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code3" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('3')">3		public static void main(String[] args) {
+
+</pre><pre id="code0" class="unselectable codeClass">			Integer[] scores = new Integer[]{ 90, 89, 86 };
+</pre><pre id="code4" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('4')">4			sort( scores );
+</pre><pre id="code0" class="unselectable codeClass">			print( scores );
+
+</pre><pre id="code0" class="unselectable codeClass">			String[] words = new String[]{ "carrot", "banana", "apple" };
+</pre><pre id="code5" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('5')">5			sort( words );
+</pre><pre id="code0" class="unselectable codeClass">			print( words );
+
+</pre><pre id="code6" class="unselectable codeClass" onmouseover="f8(this.id, true) " onmouseout="f8(this.id, false)" onclick="f7('6')">6		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre>
+</pre> 			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   

@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0706.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			const d10 = [ [ "ArrayList" ], [ "Collections" ], [ "ArrayList" ], [ "String" ], [ "ArrayList" ], [ "String" ], [ "String" ], [ "add" ], [ "Collections" ], [ "sort" ], [ "String" ], 							]; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>String 객체를 포함하는 가변 길이 배열 ArrayList를 생성하고 활용하는 문제입니다 이를 해결하는 다음 프로그램에 대해 빈칸을 채우세요 </pre> 				<pre class='selectable'>단어를 입력하세요(종료시quit): <b><font color='red'>carrot</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>banana</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>apple</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>quit</font></b>
+apple banana carrot
+</pre><br><pre class='selectable'>단어를 입력하세요(종료시quit): <b><font color='red'>귤</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>배</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>사과</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>포도</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>바나나</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>quit</font></b>
+귤 바나나 배 사과 포도
+</pre><br><pre class='selectable'>단어를 입력하세요(종료시quit): <b><font color='red'>기차</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>버스</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>택시</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>자동차</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>비행기</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>quit</font></b>
+기차 버스 비행기 자동차 택시
+</pre><br>  	  				<h4>코드 빈칸 채우기</h4> 				<pre style='white-space:pre;border:1px'>import java.util.Scanner; 
+import java.util.<input id='blank0' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(0)'>; 
+import java.util.<input id='blank1' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(1)'>; 
+public class WordArrayListMain { 
+	public static void main(String[] args) { 
+		Scanner scan = new Scanner( System.in ); 
+		<input id='blank2' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(2)'><<input id='blank3' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(3)'>> words = new <input id='blank4' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(4)'><<input id='blank5' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(5)'>>();  
+ 
+		while( true ) { 
+			System.out.print( "단어를 입력하세요(종료시quit): " ); 
+			<input id='blank6' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(6)'> word = scan.nextLine();  
+			if ( word.equals("quit") ) 
+				break; 
+			words.<input id='blank7' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(7)'>( word ); 
+		} 
+ 
+		<input id='blank8' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(8)'>.<input id='blank9' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(9)'>( words ); 
+ 
+		for( <input id='blank10' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(10)'> word : words ) 
+			System.out.print( word + " " ); 
+ 
+	} 
+} 	 			</pre> 			</div> 		</div> 	</body> </html> 

@@ -1,0 +1,61 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0706.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 	</head> 	<body onload='f2();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"></div> 			<div id = "navigationBox"></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>String 객체를 포함하는 가변 길이 배열 ArrayList를 생성하고 활용하는 문제입니다 이를 해결하는 다음 프로그램을 해석하세요 </pre> 				<pre class='selectable'>단어를 입력하세요(종료시quit): <b><font color='red'>carrot</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>banana</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>apple</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>quit</font></b>
+apple banana carrot
+</pre><br><pre class='selectable'>단어를 입력하세요(종료시quit): <b><font color='red'>귤</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>배</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>사과</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>포도</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>바나나</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>quit</font></b>
+귤 바나나 배 사과 포도
+</pre><br><pre class='selectable'>단어를 입력하세요(종료시quit): <b><font color='red'>기차</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>버스</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>택시</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>자동차</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>비행기</font></b>
+단어를 입력하세요(종료시quit): <b><font color='red'>quit</font></b>
+기차 버스 비행기 자동차 택시
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램 시작 <br>&nbsp; &nbsp;단어 입력 <br>&nbsp; &nbsp;단어 정렬 <br>&nbsp; &nbsp;단어 출력 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter07/WordArrayListMain.java</font> 
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.Scanner; 
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.<font color='red' title="제네릭 타입 <T>로 배열을 생성하며 배열 요소의 추가나 삭제 가능">ArrayList</font>; 
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.<font color='red' title="삽입이나 삭제에 따라 개수의 크기가 자동 조절되는 객체들의 모음">Collections</font>; 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	public class WordArrayListMain { 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 시작 	</b></font>
+</pre>
+<pre id="code1" class="unselectable codeClass">1		public static void main(String[] args) { 
+</pre><pre id="code0" class="unselectable codeClass">			Scanner scan = new Scanner( System.in ); 
+</pre>
+<pre id="code2" class="unselectable codeClass">2			<font color='red' title="제네릭 타입 <T>로 배열을 생성하며 배열 요소의 추가나 삭제 가능">ArrayList</font><<font color='red' title="문자열 클래스">String</font>> words = new <font color='red' title="제네릭 타입 <T>로 배열을 생성하며 배열 요소의 추가나 삭제 가능">ArrayList</font><<font color='red' title="문자열 클래스">String</font>>();  
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 단어 입력   </b></font>
+</pre>
+<pre id="code3" class="unselectable codeClass">3			while( true ) { 
+</pre><pre id="code0" class="unselectable codeClass">				System.out.print( "단어를 입력하세요(종료시quit): " ); 
+</pre><pre id="code0" class="unselectable codeClass">				<font color="green">// carrot banana apple quit을 순서대로 입력한다고 가정</font> 
+</pre><pre id="code0" class="unselectable codeClass">				<font color='red' title="문자열 클래스">String</font> word = scan.nextLine();  
+</pre>
+<pre id="code4" class="unselectable codeClass">4				if ( word.equals("quit") ) 
+</pre>
+<pre id="code5" class="unselectable codeClass">5					break; 
+</pre>
+<pre id="code6" class="unselectable codeClass">6				words.<font color='red' title="배열 요소를 추가하는 메서드">add</font>( word ); 
+</pre><pre id="code0" class="unselectable codeClass">			} 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 단어 정렬  </b></font>
+</pre>
+<pre id="code7" class="unselectable codeClass">7			<font color='red' title="삽입이나 삭제에 따라 개수의 크기가 자동 조절되는 객체들의 모음">Collections</font>.<font color='red' title="객체 요소들을 정렬">sort</font>( words ); 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 단어 출력  </b></font>
+</pre>
+<pre id="code8" class="unselectable codeClass">8			for( <font color='red' title="문자열 클래스">String</font> word : words ) 
+</pre>
+<pre id="code9" class="unselectable codeClass">9				System.out.print( word + " " ); 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 종료 	</b></font>
+</pre>
+<pre id="code10" class="unselectable codeClass">10		} 
+</pre><pre id="code0" class="unselectable codeClass">	} 
+</pre></div>	 	 				<br><h4>키워드 설명</h4> 				<pre id = "d3" style='white-space:normal;'></pre> 			 				<h4>실행 순서</h4> 				<pre id = "d4" style='white-space:normal; width:800px;'> </pre> 				<pre style='white-space:normal;'> 					※ 실행순서 및 메모리상태는 A키(이전)및 D키(다음)를 눌러도 확인할 수 있습니다  				</pre> 				<br><br> 			</div> 			<div id = "floatingBox"> 				<pre id = "outputBox" class ="outputBox"></pre>  				<div id = "intermediateResult"> 					<img id = "d7"> 					<table style = "border-spacing:0px;margin:0px;table-layout:auto;"> 						<tbody id = "d8"></tbody> 					</table> 				</div> 			</div> 		</div> 	</body> </html> 

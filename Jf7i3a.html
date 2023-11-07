@@ -1,0 +1,36 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script> 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0703.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			const d10 = [ [ "2", "1) -파일에서 읽은 대화쌍을 대화쌍 배열에 추가하기" ], [ "4", "2) 챗봇 답변을 생성하는 메서드 시작" ], [ "1", "1) -준비한 대화쌍 파일에서 읽어오기" ], [ "6", "2) -준비한 대화쌍에서" ], [ "5", "2) -챗봇 시작시 사용자에게 말 걸기" ], [ "9", "2) 챗봇 답변을 생성하는 메서드 종료" ], [ "7", "2) --적절한 답변을 찾으면 챗봇 답변을 출력" ], [ "3", "1) 파일 닫기" ], [ "8", "2) -적절한 답변을 못 찾으면 '뭐 딴거 재밌는거 없을까?' 출력" ], [ "0", "1) 파일 준비" ], 							]; 		</script> 	</head> 	<body onload='f3();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>챗봇 문제입니다 이를 해결하는 방법을 아래 참고자료에서 한줄씩 복붙해서 설명하세요 예를 들어, 사용자가 아래와 같은 문자열을 포함해서 입력하면, 프로그램은 대응되는 시스템 답변을 출력합니다. 
+이 때, 사용자가 '바이'를 입력하면 '그래 안녕! 담에 또 봐!'를 출력 후 대화를 종료하고, 적절한 답변을 못 찾으면 '뭐 딴거 재밌는거 없을까?'를 출력합니다.
+<pre>
+--------- 파일 dialogue.txt의 내용 --------- 
+이름이 뭐	난 재석이야. 국민MC 유재석과 이름이 같아. ㅎㅎㅎ 넌 몇 살이니?
+몇 살	난 20살이야. 남들이 다 부러워하는 나이지. 넌 어디 살아?
+어디 살	난 홍지동 살아. 북한산 아래 있어서 공기가 무지 맑아.ㅎㅎㅎ 취미가 뭐니?
+만나서 반가	나도 반가워 친하게 지내자
+</pre></pre> 				<pre class='selectable'>(시스템) 안녕? 넌 이름이 모야?
+ 사용자: <b><font color='red'>난 희철 넌 이름이 뭐야?</font></b>
+(시스템) 난 재석이야. 국민MC 유재석과 이름이 같아. ㅎㅎㅎ 넌 몇 살이니?
+ 사용자: <b><font color='red'>난 20살 넌 몇 살이야?</font></b>
+(시스템) 난 20살이야. 남들이 다 부러워하는 나이지. 넌 어디 살아?
+ 사용자: <b><font color='red'>종로 넌 어디 살아?</font></b>
+(시스템) 난 홍지동 살아. 북한산 아래 있어서 공기가 무지 맑아.ㅎㅎㅎ 취미가 뭐니?
+ 사용자: <b><font color='red'>앗! 미안 지금 갑자기 나가봐야 해 다음에 또 봐 바이</font></b>
+(시스템) 그래 안녕! 담에 또 봐!
+</pre><br><pre class='selectable'>(시스템) 안녕? 넌 이름이 모야?
+ 사용자: <b><font color='red'>난 희철 만나서 반가워</font></b>
+(시스템) 나도 반가워 친하게 지내자
+ 사용자: <b><font color='red'>근데 넌 이름이 뭐야?</font></b>
+(시스템) 난 재석이야. 국민MC 유재석과 이름이 같아. ㅎㅎㅎ 넌 몇 살이니?
+ 사용자: <b><font color='red'>내가 나이가 더 많을 것 같은데 ㅎㅎ 넌 몇 살이야?</font></b>
+(시스템) 난 20살이야. 남들이 다 부러워하는 나이지. 넌 어디 살아?
+ 사용자: <b><font color='red'>나한테 궁금한게 많구나 좀 부담스러워 바이</font></b>
+(시스템) 그래 안녕! 담에 또 봐!
+</pre><br><pre class='selectable'>(시스템) 안녕? 넌 이름이 모야?
+ 사용자: <b><font color='red'>안알랴줌</font></b>
+(시스템) 뭐 딴거 재밌는거 없을까?
+ 사용자: <b><font color='red'>어 없어 </font></b>
+(시스템) 뭐 딴거 재밌는거 없을까?
+ 사용자: <b><font color='red'>너 좀 이상한 아이구나</font></b>
+(시스템) 뭐 딴거 재밌는거 없을까?
+ 사용자: <b><font color='red'>재미없어 바이</font></b>
+(시스템) 그래 안녕! 담에 또 봐!
+</pre><br>  	 				<h4>알고리즘</h4> 				<div id="card" style='width:1200px;'> 	  				<div id="cardSlots"></div> 	  				<div id="cardPile"></div> 				</div> 			</div> 		</div> 	</body>  </html>  

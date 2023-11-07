@@ -1,0 +1,43 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script type="text/javascript" src="https://5awf1ssnauwzzo5wgvczig.on.drv.tw/Web/J/J0707.js"></script> 		<script type="text/javascript" src="../reading/functions.js"></script> 		<link rel="stylesheet" href="../reading/layout.css"> 		<script> 			const d10 = [ [ "T" ], [ "extends" ], [ "Comparable" ], [ "T" ], [ "T" ], [ "length" ], [ "compareTo" ], [ "T" ], [ "T" ], [ "T" ], [ "length" ], [ "Integer" ], [ "Integer" ], [ "String" ], [ "String" ], 							]; 		</script> 	</head> 	<body onload='f1();' onkeydown='f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> 			</div> 			<div id = "navigationBox"> 			</div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>제네릭 메서드를 이용하여 가변 길이 배열을 정렬입니다 이를 해결하는 다음 프로그램에 대해 빈칸을 채우세요 </pre> 				<pre class='selectable'>1) 86 2) 89 3) 90 
+1) apple 2) banana 3) carrot
+</pre><br><pre class='selectable'>1) 86 2) 89 3) 90 
+1) apple 2) banana 3) carrot
+</pre><br><pre class='selectable'>1) 86 2) 89 3) 90 
+1) apple 2) banana 3) carrot
+</pre><br>  	  				<h4>코드 빈칸 채우기</h4> 				<pre style='white-space:pre;border:1px'>public class GenericMethodMain { 
+	public static <<input id='blank0' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(0)'> <input id='blank1' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(1)'> <input id='blank2' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(2)'><<input id='blank3' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(3)'>>> void sort( <input id='blank4' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(4)'>[] list ) { 
+		for ( int max = list.<input id='blank5' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(5)'> - 1; max >= 0; max-- )				 
+		{ 
+			for ( int index = 0; index < max; index++ )				 
+			{ 
+				if ( list[ index ].<input id='blank6' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(6)'>( list[ index + 1 ] ) > 0 )				 
+				{ 
+					<input id='blank7' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(7)'> temp = list[ index ];						 
+					list[ index ] = list[ index + 1 ];  
+					list[ index + 1 ] = temp;  
+				} 
+			} 
+		} 
+	} 
+	 
+	public static <<input id='blank8' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(8)'>> void print( <input id='blank9' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(9)'>[] list )  
+	{	 
+		for ( int index = 0; index < list.<input id='blank10' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(10)'>; index ++ )  					  
+		{ 
+			System.out.print( ( index + 1 ) + ") " + list[ index ] + " " ); 
+		}  
+		System.out.println(); 
+	}		 
+	 
+	public static void main(String[] args) { 
+ 
+		<input id='blank11' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(11)'>[] scores = new <input id='blank12' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(12)'>[]{ 90, 89, 86 }; 
+		sort( scores ); 
+		print( scores ); 
+ 
+		<input id='blank13' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(13)'>[] words = new <input id='blank14' type='text' required minlength='1' maxlength='30' size='10' onchange='f6(14)'>[]{ "carrot", "banana", "apple" }; 
+		sort( words ); 
+		print( words ); 
+ 
+	} 
+} 	 			</pre> 			</div> 		</div> 	</body> </html> 
