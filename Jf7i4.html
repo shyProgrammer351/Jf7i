@@ -96,20 +96,20 @@ WASD와 [Enter]를 입력하세요: <b><span style='color:rgb(255,0,0);'>q</span
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 맵 출력 </b></font>
 </pre>
-<pre id="code3" class="unselectable codeClass">3			System.out.println( " <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[44m                  <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[0m " );
+<pre id="code3" class="unselectable codeClass">3			System.out.println( " \033[44m                  \033[0m " );
 </pre>
 <pre id="code4" class="unselectable codeClass">4			while( ++row &lt; 8 )
 </pre>
-<pre id="code5" class="unselectable codeClass">5				System.out.println( " <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[44m  <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[0m                <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[44m  <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[0m " );
+<pre id="code5" class="unselectable codeClass">5				System.out.println( " \033[44m  \033[0m                \033[44m  \033[0m " );
 </pre>
-<pre id="code6" class="unselectable codeClass">6			System.out.println( " <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[44m                  <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[0m " );
+<pre id="code6" class="unselectable codeClass">6			System.out.println( " \033[44m                  \033[0m " );
 </pre><pre id="code0" class="unselectable codeClass">			 
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 입력 방향에 따라 캐릭터 이동시키기 </b></font>
 </pre>
 <pre id="code7" class="unselectable codeClass">7			do {
 </pre><pre id="code0" class="unselectable codeClass">				<font color="green">//<b> 먼저 캐릭터의 기존 위치 지우고 새 위치로 업데이트 </b></font>
 </pre>
-<pre id="code8" class="unselectable codeClass">8				System.out.print( " <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[" + row + ";" + column + "f  " );
+<pre id="code8" class="unselectable codeClass">8				System.out.print( " \033[" + row + ";" + column + "f  " );
 </pre>
 <pre id="code9" class="unselectable codeClass">9				switch( direction ) {
 </pre><pre id="code0" class="unselectable codeClass">					<font color="green">//<b> W는 위로 이동 </b></font>
@@ -142,11 +142,11 @@ WASD와 [Enter]를 입력하세요: <b><span style='color:rgb(255,0,0);'>q</span
 <pre id="code21" class="unselectable codeClass">21						break;
 </pre><pre id="code0" class="unselectable codeClass">				}
 </pre>
-<pre id="code22" class="unselectable codeClass">22				System.out.print( " <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[" + row + ";" + column + "f옷" );
+<pre id="code22" class="unselectable codeClass">22				System.out.print( " \033[" + row + ";" + column + "f옷" );
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">				<font color="green">//<b> 캐릭터의 다음 이동 방향 입력 받기 </b></font>
 </pre>
-<pre id="code23" class="unselectable codeClass">23				System.out.print( " <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[10;1f <a href='../Jf1i/Jf1i0.html' target='keyword'>\033</a>[2KWASD와 [Enter]를 입력하세요: " );
+<pre id="code23" class="unselectable codeClass">23				System.out.print( " \033[10;1f \033[2KWASD와 [Enter]를 입력하세요: " );
 </pre>
 <pre id="code24" class="unselectable codeClass">24				direction= scan.nextLine().charAt(0);
 </pre>
