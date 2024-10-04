@@ -63,23 +63,23 @@
 			<br>public class Main {
 			<br> &nbsp; public static void main( String[] args ) {
 			<br> &nbsp; &nbsp; Scanner scan = new Scanner( System.in );
-			<br> &nbsp; &nbsp; int chance = 6, user = 0, number = (int)( Math.random() * 100 ) + 1;
+			<br> &nbsp; &nbsp; int number = (int)( Math.random() * 100 ) + 1;
+			<br> &nbsp; &nbsp; int chance = 5; 
 		</td>
 		<td>
 		</td>
 	</tr>
 	<tr style='background-color:skyblue;'>
 		<td>
-		 	&nbsp; &nbsp; <span style='color:red;'>while</span>( --chance > 0 ) <span style='color:red;'>{</span>
+			 &nbsp; &nbsp; <span style='color:red;'>while</span>( --chance > 0 ) <span style='color:red;'>{</span>
 		</td>
 		<td>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			 &nbsp; &nbsp; &nbsp; System.out.println( "기회는 " + chance + "번 남았습니다" );
-			<br> &nbsp; &nbsp; &nbsp; System.out.print( "1~100사이의 숫자를 입력하세요: " );
-			<br> &nbsp; &nbsp; &nbsp; user = scan.nextInt();
+			 &nbsp; &nbsp; &nbsp; System.out.print( "1~100사이의 숫자를 입력하세요: " );
+			<br> &nbsp; &nbsp; &nbsp; int user = scan.nextInt();
 			<br> &nbsp; &nbsp; &nbsp; if ( ( user < 1 ) || ( 100 < user ) ) {
 			<br> &nbsp; &nbsp; &nbsp; &nbsp; System.out.println( "제한범위를 벗어났습니다" );
 			<br> &nbsp; &nbsp; &nbsp; &nbsp; chance++;
@@ -121,6 +121,7 @@
 			<br> &nbsp; &nbsp; &nbsp; else if ( number < user ) {
 			<br> &nbsp; &nbsp; &nbsp; &nbsp; System.out.println( "Down!" );
 			<br> &nbsp; &nbsp; &nbsp; }
+			<br> &nbsp; &nbsp; &nbsp; System.out.println( "기회는 " + chance + "번 남았습니다" );
 			<br> &nbsp; &nbsp; <span style='color:red;'>}</span>
 		</td>
 		<td>
