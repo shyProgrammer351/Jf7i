@@ -10,147 +10,15 @@
 	<body oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false">
 		<div id = "container">
 			<div id = "titleBox"> JAVA 프로그래밍 </div>
-			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><ul><li><a href='../Jf7i/Jf7i1.html'>엘리베이터</a></li><li><a href='../Jf7i/Jf7i2.html'>가위바위보 입력</a></li><li><a href='../Jf7i/Jf7i3.html'>동전 던지기</a></li><li><a href='../Jf7i/Jf7i4.html'>캐릭터 이동</a></li><li><a href='../Jf7i/Jf7i5.html'>Up&Down 게임</a></li></ul><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div> 
+			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀호출</a></li><ul></ul></ol></div> 
 			<div id = "contentBox">
-				<h3>7. 반복문(while)</h3>
-
-<table style='width:790px; margin:0; padding:10px; border:1px solid #bcbcbc; line-height:1.5;'>
-	<tr>
-		<td>
-			<span style='color:red;'>while</span>( 조건식 ) { 
-			<br> &nbsp; 조건식이 참이면 실행하는 명령문
-			<br>}
-		</td>
-		<td>
-			<span style='color:red;'>do</span> { 
-			<br> &nbsp; 조건식이 참이면 실행하는 명령문
-			<br>} <span style='color:red;'>while</span>( 조건식 );
-		</td>
-	</tr>
-</table>
-	
-<br><span style='color:red;'>while</span> &nbsp; 조건식이 참일 때마다 해당 명령문을 실행하는 반복문
-<br>조건식(참) → 명령문 → 조건식(참) → 명령문 → ... → 조건식(거짓) → while문 종료의 순서대로 실행
-<br><br><span style='color:red;'>do</span> &nbsp; 한 번 이상 실행하는 반복문의 시작을 표현
-<br>명령문 → 조건식(참) → 명령문 → 조건식(참) → ... → 조건식(거짓) → do-while문 종료의 순서대로 실행
-<br><br>
-<table style='width:790px; margin:0; padding:10px; border:1px solid #bcbcbc; line-height:1.5;'>
-	<tr>
-		<td><span style='color:red;'>while</span>( 조건식 ) { 
-<br> &nbsp; 조건식이 참이면 실행하는 명령문
-<br> &nbsp; <span style='color:red;'>break</span>; 
-<br> &nbsp; break문이 적용되지 않을 때만 실행하는 명령문
-<br>}		</td>
-		<td><span style='color:red;'>while</span>( 조건식 ) { 
-<br> &nbsp; 조건식이 참이면 실행하는 명령문
-<br> &nbsp; <span style='color:red;'>continue</span>;
-<br> &nbsp; continue가 적용되지 않을 때만 실행하는 명령문
-<br>}		</td>
-	</tr>
-</table>
-
-<br><span style='color:red;'>break</span> &nbsp; 실행흐름을 중단하고 해당 영역을 빠져나오는 명령문
-<br>while문, for문, switch문에서 break를 실행하면 이후 이후 명령문이나 조건식은 모두 건너띄고 반복문 중단
-<br><br><span style='color:red;'>continue</span> &nbsp; 이후의 명령문은 실행하지 않고 반복문의 조건식으로 실행흐름을 바꾸는 명령문
-<br>조건식(참) → 명령문 → continue → 조건식(참) → 명령문 → ...의 순서대로 실행
-<br><br>
-<table style='width:790px; margin:0; padding:10px; border:1px solid #bcbcbc; font-size: 14px;'>
-	<tr>
-		<td style='width:480px;'>
-			import java.util.Scanner;
-			<br>import java.lang.Math;
-			<br>			
-			<br>public class Main {
-			<br> &nbsp; public static void main( String[] args ) {
-			<br> &nbsp; &nbsp; Scanner scan = new Scanner( System.in );
-			<br> &nbsp; &nbsp; int number = (int)( Math.random() * 100 ) + 1;
-			<br> &nbsp; &nbsp; int chance = 5; 
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr style='background-color:skyblue;'>
-		<td>
-			 &nbsp; &nbsp; <span style='color:red;'>while</span>( --chance > 0 ) <span style='color:red;'>{</span>
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			 &nbsp; &nbsp; &nbsp; System.out.print( "1~100사이의 숫자를 입력하세요: " );
-			<br> &nbsp; &nbsp; &nbsp; int user = scan.nextInt();
-			<br> &nbsp; &nbsp; &nbsp; if ( ( user < 1 ) || ( 100 < user ) ) {
-			<br> &nbsp; &nbsp; &nbsp; &nbsp; System.out.println( "제한범위를 벗어났습니다" );
-			<br> &nbsp; &nbsp; &nbsp; &nbsp; chance++;
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr style='background-color:skyblue;'>
-		<td>
-		  &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:red;'>continue</span>;
-		</td>
-		<td>
-		  &nbsp; while(조건식)으로 이동
-		</td>
-	</tr>
-	<tr>
-		<td>
-			 &nbsp; &nbsp; &nbsp; }
-			<br> &nbsp; &nbsp; &nbsp; else if ( number == user ) {
-			<br> &nbsp; &nbsp; &nbsp; &nbsp; System.out.println( "Success!!" );
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr style='background-color:skyblue;'>
-		<td>
-			 &nbsp; &nbsp; &nbsp; &nbsp; <span style='color:red;'>break</span>;
-		</td>
-		<td>
-			 &nbsp; while문 종료 후 main 메서드 끝으로 이동
-		</td>
-	</tr>
-	<tr>
-		<td>
-			 &nbsp; &nbsp; &nbsp; }
-			<br> &nbsp; &nbsp; &nbsp; else if ( number > user ) {
-			<br> &nbsp; &nbsp; &nbsp; &nbsp; System.out.println( "Up!" );
-			<br> &nbsp; &nbsp; &nbsp; }
-			<br> &nbsp; &nbsp; &nbsp; else if ( number < user ) {
-			<br> &nbsp; &nbsp; &nbsp; &nbsp; System.out.println( "Down!" );
-			<br> &nbsp; &nbsp; &nbsp; }
-			<br> &nbsp; &nbsp; &nbsp; System.out.println( "기회는 " + chance + "번 남았습니다" );
-			<br> &nbsp; &nbsp; <span style='color:red;'>}</span>
-		</td>
-		<td>
-		</td>
-	</tr>
-	<tr style='background-color:skyblue;'>
-		<td>
-		  &nbsp; }
-		</td>
-		<td>
-			&nbsp; main 메서드 끝
-		</td>
-	</tr>
-	<tr>
-		<td>
-			}
-		</td>
-		<td>
-		</td>
-	</tr>
-</table>
-<br>
-<br>
-
-
+				<br><br>(준비중입니다)
 				<br><br><br><br><br><br><br><br> &nbsp; 
 			</div>
 		</div>
 	</body> 
 </html>
+
+
 
 
